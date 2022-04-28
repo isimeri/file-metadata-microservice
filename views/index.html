@@ -4,30 +4,34 @@
    <head>
       <title>File Metadata</title>
       <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
       <link href="/public/style.css" rel="stylesheet" type="text/css">
    </head>
 
    <body>
       <div class="container">
-        <h2>API Project: File Metadata Microservice</h2>
-
-        <h3>Usage:</h3>
+        <h1 class="main-header">API Project: File Metadata Microservice</h1>
         <p>
           Please Upload a File ...
         </p>
         <div class="view">
           <h4 id="output"></h4>
-          <form enctype="multipart/form-data" method="POST" action="/api/fileanalyse">
-            <input id="inputfield" type="file" name="upfile">
+          <form id="form" enctype="multipart/form-data" method="POST" action="/api/fileanalyse">
+            <input id="inputfield" type="file" name="upfile" title="Pick a file from your machine" value="bruh">
+            <div class="form-line" ></div>
             <input id="button" type="submit" value="Upload">
           </form>
+        </div>
+        <div class="instr">
+          <p><span class="emph">Note:</span> the max accepted file size is <span class="emph">1MB</span>.</p>
         </div>
       </div>
       <div class="footer">
         <p>
           by 
-          <a href="http://www.freecodecamp.com">freeCodeCamp</a>
+          <a href="https://github.com/isimeri">isimeri</a>
         </p>
       </div>
    </body>

@@ -1,42 +1,97 @@
-/****** Main Styling ******/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --lightblue: #8ecae6;
+  --mediumblue: hsl(200, 70%, 33%);
+  --darkblue: hsl(200, 95%, 14%);
+  --yellow: #ffb703;
+  --orange: #fb8500;
+}
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 16px;
-  color: #222;
-  background-color: #ECF0F1;
+  color: var(--lightblue);
+  background-color: var(--darkblue);
+  padding-top: 6vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-header{
+  margin-bottom: 2rem;
+}
+.container, .footer{
   text-align: center;
 }
-
-.container {
-  padding: 0;
-  margin-top: 40px;
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
 }
-
-.footer {
-  margin-top: 60px;
+.footer{
+  background-color: var(--mediumblue);
+  padding: 0.6rem 0;
 }
-
 a {
-  color: #2574A9;
+  color: var(--yellow);
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+a:hover{
+  cursor: pointer;
+  color: var(--lightblue);
 }
 
-input {
-  display: block;
-  position: relative;
-  margin: 10px auto;
-}
-
-input#button {
-  width: 230px;
-}
-
-.view {
-  position:relative;
-  margin: auto;
-  margin-top: 40px;
-  border: 1px  solid  #aaa;
+.view, .instr {
+  background-color: var(--mediumblue);
   padding: 20px;
   width: 60%;
+  max-width: 500px;
   min-width: 400px;
+}
+.instr{
+  text-align: left;
+}
+.emph{
+  font-weight: 500;
+  color: var(--yellow);
+}
+#form{
+  display: flex;
+  flex-direction: column;
+}
+input[type='submit'],input[type='file']::-webkit-file-upload-button, input[type='file']::file-selector-button{
+  background-color: var(--yellow);
+  color: var(--darkblue);
+  border: none;
+  padding: 0.5rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+input[type='submit']:hover,input[type='file']:hover::-webkit-file-upload-button, input[type='file']:hover::file-selector-button{
+  background-color: var(--orange);
+  cursor: pointer;
+}
+input[type='file']::-webkit-file-upload-button, input[type='file']::file-selector-button{
+  margin-right: 1rem;
+}
+.form-line{
+ background: linear-gradient(to right, transparent 0px 10%, var(--darkblue) 20% 90%, transparent);
+ width: 75%;
+ height: 1px;
+ margin-bottom: 1rem;
+ align-self: center;
+}
+input[type='submit']{
+  min-width: 10rem;
 }
